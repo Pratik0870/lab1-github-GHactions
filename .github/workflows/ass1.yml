@@ -1,0 +1,14 @@
+name: assignment1-workflow.
+
+on:
+  push:
+    paths:
+      - student_note.md
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print repo and username
+        run: echo "Repository ${{ github.repository }} ${{ github.actor }}"
